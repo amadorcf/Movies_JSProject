@@ -9,6 +9,7 @@ export default class Storage{
         let movies = JSON.parse(localStorage.getItem('movies'));
 
         if(!movies || movies.length < 1){
+            
             movies = [
                 {
                     id:0,
@@ -17,6 +18,7 @@ export default class Storage{
                 }
             ]
             this.id = 1;
+            
         }else{
             this.id = movies[movies.length -1].id + 1;
         }
@@ -31,5 +33,5 @@ export default class Storage{
     save(data){
         localStorage.setItem('movies', JSON.stringify(data));
     }
-    
+
 }
