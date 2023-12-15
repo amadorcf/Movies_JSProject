@@ -1,7 +1,7 @@
 /* ESTILOS GENERALES */
 
 body{
-    background: #d1defa;
+    background: #dae4fa;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 0px;
@@ -97,17 +97,18 @@ body{
 /* ESTILOS DEL CONTENIDO*/
 .content{
     grid-area: content;
-    background-color: rgb(230, 234, 245);
+    background: #dae4fa;
 
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     padding: 10px;
+    margin-left: 30px;
 }
 
 .movie-item{
-    background-color: white;
+    background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 5px #03228f;
     margin: 20px;
@@ -124,6 +125,7 @@ button, input[type="button"], input[type="submit"]{
     border: 0;
     outline: 0;
     padding: 10px;
+    margin-top: 10px;
     border-radius: 3px;
     text-transform: capitalize;
     font-size: 15px;
@@ -133,22 +135,93 @@ button, input[type="button"], input[type="submit"]{
 }
 
 .movie-item .edit:hover{
-    background-color: gold;
+    background: gold;
 }
 
 .movie-item .delete:hover{
-    background-color: firebrick;
-
+    background: firebrick;
 }
 
+/* ESTILOS BARRA LATERAL*/
 .lateral{
     grid-area: lateral;
-    border: 5px solid blue;
-    background-color: lightskyblue;
+    background: #dae4fa;
+    border-left: 1px solid #ddd;
+    padding: 30px;
+    margin-right: 30px;
 }
+
+.lateral div{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #03228f;
+}
+
+.lateral input[type="text"],
+.lateral input[type="text"],
+.lateral textarea{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px;
+    background: #f6f7f9;
+    color: #454545;
+    width:80%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+    border-radius: 5px;
+} 
+
+.lateral .search button:hover{
+    background: blue;
+} 
+
+.lateral .add input[type="submit"]:hover{
+    background: blue;
+}
+
+/* ESTILOS PIE DE PAGINA */
 
 .footer{
     grid-area: footer;
-    border: 5px solid yellow;
-    background-color: lightgoldenrodyellow;
+
+    background: linear-gradient(90deg, #03228f 10%, #75a8e2 100%);
+    color: white;
+    text-align: center;
+    line-height: 68px;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+.site-content {
+    padding-bottom: 0;
+}
+
+@media (max-width: 1085px){
+    .content{
+        flex-flow:  column wrap;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .movie-item{
+        width: 80%;
+    }
+}
+
+.blog{
+    margin: 0px 50px;
+}
+
+.blog ul{
+    margin: 0px 50px;
+    list-style: none;
 }
