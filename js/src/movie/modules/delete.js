@@ -14,7 +14,7 @@ export default function(){
     // Recorrer peliculas motradas
     movies_viewed.forEach(movie =>{
         //let selector = "#"+ movie.id +" .delete";
-        let delete_btn = movie.querySelector(" .delete");
+        let delete_btn = movie.querySelector(".delete");
 
         delete_btn.onclick =  function(){  //tambien se puede hacer con addEventListener
             const movie_id = this.getAttribute('data-id');

@@ -9,7 +9,7 @@ export default class Add {
 
         // Obtener elementos del DOM a utilizar
         this.title = document.querySelector("#title");
-        this.desciption = document.querySelector("#desciption");
+        this.description = document.querySelector("#description");
         this.save_btn = document.querySelector("#save");
     }
 
@@ -25,15 +25,15 @@ export default class Add {
 
             //Datos a guardar
             let title = this.title.value;
-            let desciption = this.desciption.value;
+            let description = this.description.value;
 
             //Validacion
-            if(title != "" || desciption != ""){
+            if(title != "" || description != ""){
                 // Crear objeto
                 let movie = {
                     id: lastId++,
                     title,
-                    desciption,
+                    description,
                 }
 
                 // Guardar en el array de objetos
