@@ -1,3 +1,5 @@
+import deleteOfList from "./delete.js";
+
 export default class List{
 
     constructor(){
@@ -10,7 +12,7 @@ export default class List{
         let template = `
         <article class="movie-item" id="movie-${movie.id}">
             <h3 class="title">${movie.title}</h3>
-            <p class="desciption">${movie.description}</p>
+            <p class="desciption">${movie.desciption}</p>
 
             <button class="edit" data-id="${movie.id}">Edit</button>
             <button class="delete" data-id="${movie.id}">Delete</button>
@@ -47,6 +49,14 @@ export default class List{
         movies.forEach(movie => {
             this.content.innerHTML += this.movie_template(movie);
         });
+
+        // Funcionalidad - Boton eliminar
+        deleteOfList();
+
+        // Funcionalidad - Boton editar
+
     }
+
+
 
 }
