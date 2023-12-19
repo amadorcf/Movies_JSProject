@@ -10,9 +10,13 @@ export default class List{
 
 
     movie_template(movie){
+
+        const movie_title = movie.title;
+        const movie_title_cap = movie_title.charAt(0).toUpperCase() + movie_title.slice(1);
+
         let template = `
         <article class="movie-item" id="movie-${movie.id}">
-            <h3 class="title">${movie.title}</h3>
+            <h3 class="title">${movie_title_cap}</h3>
             <p class="description">${movie.description}</p>
 
             <button class="edit" data-id="${movie.id}">Edit</button>
@@ -44,7 +48,11 @@ export default class List{
         this.content.innerHTML = "";
 
         // Quitar primer elemento de la lista
-        movies.shift();
+        movies.forEach(movie => {
+            if(movie.id == 0){
+                movies.shift();
+            }
+        });
 
         // Recuperar las peliculas del LocalStorage
         movies.forEach(movie => {
@@ -57,7 +65,6 @@ export default class List{
         // Funcionalidad - Boton editar
         edit();
     }
-
 
 
 }
