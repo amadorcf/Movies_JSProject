@@ -13,4 +13,4 @@
 
   - #### APIs HTML5, que te permitirán programar cosas increibles usando Javascript.
 
-  - #### Habilidades front-end, haciendo cientos de ejercicios y varios proyectos.
+  - #### Habilidades front-end
