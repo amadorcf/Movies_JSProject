@@ -1,6 +1,6 @@
 # Movies_JSproject
 
-## En este proyecto se plasman los conocimientos aprendidos en las ultimas semanas sobre:
+## En este proyecto se plasman los conocimientos aprendidos sobre:
 
 
   - #### JavaScript moderno, el lenguaje de programación más popular en la actualidad.
